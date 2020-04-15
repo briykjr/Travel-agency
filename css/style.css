@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css?family=Aldrich|Nunito:200,400,600,700&display=swap');
+    
+
+/*================================ General Styles ===========================*/
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html{
+    font-size: 10px;
+    font-family: 'Nunito', sans-serif;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+img{
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+p{
+    font-size: 1.6rem;
+}
+section{
+    padding: 6rem 0;
+}
+.container{
+    width: 100%;
+    max-width: 98rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+/*================================ nav Styles ===========================*/
+header{
+    width: 100%;
+    height: 5rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.nav-brand{
+    width: 2rem;
+}
+.menu-bar ion-icon{
+    font-size: 3.5rem;
+    color: #f4f4f4;
+    cursor: pointer;
+}
+.close ion-icon{
+    color: #eb648c;
+}
+.nav-list{
+    width: 20rem;
+    background: #d7d4ed;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -21rem;
+    z-index: 10000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 650ms ease-in-out; 
+}
+.nav-list.active{
+    right: 0;
+}
+.close{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+.nav-item{
+    margin: 1.5rem 0;
+}
+.nav-link{
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, .8);
+    font-weight: 600;
+}
+/*================================ header content Styles ===========================*/
+#home{
+    width: 100%;
+    height: 80vh;
+    background: linear-gradient(135deg, rgba(252, 92, 125 , 0.9) 0%, rgba(106, 130, 251 , 0.8) 100%) , url(../images/header-banner.jpg) center no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#home::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 100%;
+    background: url(../images/wave-small.png) center no-repeat;
+    background-size: cover;
+    height: 4.7rem;
+    border-bottom: 7px solid #fff;
+}
+.home-content{
+   width: 100%;
+   max-width: 50rem;
+   color: #fff;
+   text-transform: uppercase;
+   transform: translateY(25%);
+}
+.home-content h3{
+    font-size: 1.8rem;
+}
+.home-content h1{
+    font-size: 4rem;
+    font-family: 'Aldrich', sans-serif;
+    margin: .5rem 0 1rem;
+}
+.home-content p{
+    text-transform: lowercase;
+}
+.home-content .cta{
+    margin-top: 1.5rem;
+}
+.btn{
+    color: #fff;
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    font-weight: 600;
+    background: #eb648c;
+    border-radius: 2rem;
+    transition: all 650ms linear;
+}
+.btn:hover{
+    background: #ce587b;
+}
+
+.btn ion-icon{
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    vertical-align: middle;
+}
+/*================================ Experience Styles ===========================*/
+#experience{
+    padding: 1em 0;    
+}
+.section-title {
+        text-align: center;
+    text-transform: uppercase;
+    color: rgba(0  ,0,0,0.7);
+    margin-bottom: 2rem;
+}
+.section-title h3{
+    font-size: 1.8rem
+}
+.section-title h1{
+    font-size: 2rem;
+    margin: .5rem 0 1rem;   
+    font-family: 'Aldrich', sans-serif; 
+}
+.section-title p{
+    text-transform: lowercase;
+}
+.activites-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(25rem , 1fr) );
+    grid-gap: 2.5rem;
+}
+.grid-item{
+    color: #fff;
+    height: 40rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 4rem;
+    z-index: 1;
+    text-align: center;
+}
+.grid-item::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(135deg, rgba(252, 92, 125 , 0.9) 0%, rgba(106, 130, 251 , 0.8) 100%);
+}
+.start-gazing{
+    background: url(../images/gazing.jpg) center no-repeat ;
+    background-size: cover;
+}
+.hiking{
+    background: url(../images/hiking.jpg) center no-repeat ;
+    background-size: cover;
+}
+.camping{
+    background: url(../images/camping.jpg) center no-repeat ;
+    background-size: cover;
+}
+.grid-item ion-icon{
+    font-size: 4rem;
+    color: #f4f4f4;
+}
+.grid-item h1{
+    font-family: 'Aldrich', sans-serif;
+    margin: 1.5rem 0;
+    font-size: 1.7rem;
+    text-transform: uppercase;
+}
+/*================================ Testimonials Styles ===========================*/
+#testimonials{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, rgba(252, 92, 125 , 0.9) 0%, rgba(106, 130, 251 , 0.8) 100%) , url(../images/testimonials.jpg) center no-repeat fixed;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+#testimonials::before{
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 0;
+    width: 100%;
+    height: 4.7rem;
+    background: url(../images/wave-small-reversed.png) center no-repeat;
+    background-size: cover;
+}
+.test-item{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: #f4f4f4;
+    text-align: center;
+    
+}
+.test-item .text{
+    position: relative;
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+.quote{
+    font-size: 10rem;
+    font-weight: bold;
+    position: absolute;
+    top: -6rem;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #f4f4f4;
+    opacity: 0.8;
+}
+.user img{
+    width: 8rem;
+    height: 8rem;
+    border-radius: 100%;
+    border: 3px solid #ce587b;
+}
+
+/*================================ Adventure Styles ===========================*/
+.adventure-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(25rem , 1fr) );
+    grid-gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+.adventure-grid-item p{
+    color: rgba(0,0,0,0.7);
+}
+
+/*================================ Footer Styles ===========================*/
+footer{
+    width: 100%;
+    background-color: #eb648c;
+    text-align: center;
+}
+footer p{
+    font-size: 1.6rem;
+    color: #f4f4f4;
+    font-weight: 700;
+    padding: 1rem 0;
+}
+/*================================ Responsive Styles ===========================*/
+
+@media (min-width: 470px){
+    #home::before{
+        content: '';
+        background: url(../images/wave-medium.png) center no-repeat;
+        background-size: cover;
+        height: 9.4rem;
+    }
+    #testimonials::before{
+        content: '';
+        background: url(../images/wave-medium-reversed.png) center no-repeat;
+        background-size: cover;
+        height: 9.4rem;
+    }
+}
+@media screen and (min-width: 700px){
+    header{
+        height: 8rem;
+    }
+    .nav-brand{
+        width: 3.5rem;
+    }
+    .nav-list{
+        width: initial;
+        height: initial;
+        position: initial;
+        background: transparent;
+        top: initial;
+        right: inherit;
+        display: flex;
+        flex-direction: row;
+        transition: initial;
+    }
+    .menu-bar{
+        display: none;
+    }
+    .nav-item{
+        margin: 0 1.2rem;
+    }
+    .nav-link , .current{
+        color: #f4f4f4;
+        position: relative;
+        font-size: 1.3rem;
+    }
+    .nav-link::before , 
+    .current::before{
+        content: '';
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: #eb648c;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 650ms linear;
+    }
+    .current::before{
+        transform: scaleX(1);
+    }
+    .nav-link:hover::before{
+        transform: scaleX(1);
+    }
+  
+}
+@media screen and (min-width: 900px){
+    #home{
+        height: 100vh;
+    }
+    #home::before{
+        content: '';
+        background: url(../images/wave-large.png) center no-repeat;
+        background-size: cover;
+        height: 22.7rem;
+        bottom: -40px;
+    }
+    #testimonials::before{
+        content: '';
+        background: url(../images/wave-large-reversed.png) center no-repeat;
+        background-size: cover;
+        height: 22.7rem;
+    }
+}
